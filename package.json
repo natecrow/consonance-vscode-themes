@@ -1,0 +1,53 @@
+{
+    "name": "consonance-themes",
+    "displayName": "Consonance Themes",
+    "description": "Collection of simple color themes each consisting of one primary hue.",
+    "version": "0.0.1",
+    "author": "Nate Crow (https://github.com/natecrow)",
+    "publisher": "Nate Crow",
+    "engines": {
+        "vscode": "^1.45.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Consonance - Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/purple-315-75-color-theme.json"
+            },
+            {
+                "label": "Consonance - Green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/green-145-265-color-theme.json"
+            },
+            {
+                "label": "Consonance - Blue",
+                "uiTheme": "vs-dark",
+                "path": "./themes/blue-265-25-color-theme.json"
+            },
+            {
+                "label": "Consonance - Amber",
+                "uiTheme": "vs-dark",
+                "path": "./themes/amber-75-195-color-theme.json"
+            },
+            {
+                "label": "Consonance - Orange",
+                "uiTheme": "vs-dark",
+                "path": "./themes/orange-50-290-color-theme.json"
+            },
+            {
+                "label": "Consonance - Red",
+                "uiTheme": "vs-dark",
+                "path": "./themes/red-25-265-color-theme.json"
+            },
+            {
+                "label": "Consonance - Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/pink-345-105-color-theme.json"
+            }
+        ]
+    }
+}
