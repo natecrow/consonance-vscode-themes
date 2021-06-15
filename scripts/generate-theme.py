@@ -6,26 +6,21 @@ import json
 
 
 def main():
-    if (len(argv) > 2):
+    if (len(argv) > 3):
         name = str(argv[1])
         hue = int(argv[2])
+        hue2 = int(argv[3]) # +/- 120 from primary hue - whichever looks better
 
-        generateUniColorVsCodeTheme(name, hue)
+        generateUniColorVsCodeTheme(name, hue, hue2)
     else:
-        print('Expecting color theme name and an LCH hue value.')
+        print('Expecting color theme name, primary LCH hue value, and secondary LCH hue value.')
 
 
-def generateUniColorVsCodeTheme(name, hue):
+def generateUniColorVsCodeTheme(name, hue, hue2):
     '''
-    Generates VS Code color theme JSON file from given hue and name.
+    Generates VS Code color theme JSON file from given hues and name.
     Filename is generated automatically based on given name.
     '''
-    hue2 = hue + 120  # can add or subtract - whichever looks better
-    if hue2 > 360:
-        hue2 -= 360
-    elif hue2 < 0:
-        hue2 += 360
-
     colors = _generateThemeHexValues(hue, hue2)
     filename = name.lower().replace(' ', '-').replace('&', 'and') + '-color-theme.json'
     with open(filename, 'w') as f:
