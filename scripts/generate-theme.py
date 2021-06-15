@@ -42,14 +42,14 @@ def _generateThemeHexValues(hue, hue2):
         'bg1':          LCHabColor(15, 0, 0, obs, ill),
         'bg2':          LCHabColor(25, 0, 0, obs, ill),
         # fgs
-        'fg0':          LCHabColor(30, 15, hue2, obs, ill),
-        'fg1':          LCHabColor(55, 15, hue2, obs, ill),
-        'fg2':          LCHabColor(75, 15, hue2, obs, ill),
+        'fg0':          LCHabColor(40, 15, hue2, obs, ill),
+        'fg1':          LCHabColor(60, 15, hue2, obs, ill),
+        'fg2':          LCHabColor(80, 15, hue2, obs, ill),
         # color
-        'color0':       LCHabColor(45, 15, hue, obs, ill),
-        'color1':       LCHabColor(55, 50, hue, obs, ill),
-        'color2':       LCHabColor(65, 15, hue, obs, ill),
-        'color3':       LCHabColor(75, 50, hue, obs, ill),
+        'color0':       LCHabColor(50, 20, hue, obs, ill),
+        'color1':       LCHabColor(60, 50, hue, obs, ill),
+        'color2':       LCHabColor(70, 20, hue, obs, ill),
+        'color3':       LCHabColor(80, 50, hue, obs, ill),
         # red, green, blue, orange
         'red':          LCHabColor(60, 50, 25, obs, ill),
         'orange':       LCHabColor(60, 50, 55, obs, ill),
