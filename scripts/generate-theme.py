@@ -319,6 +319,15 @@ def _generateJsonContent(name, colors):
                 }
             },
             {
+                'name': 'CSS Tag',
+                'scope': [
+                    'entity.name.tag.css'
+                ],
+                'settings': {
+                    'foreground': colors['color1']
+                }
+            },
+            {
                 'name': 'Storage type, attribute',
                 'scope': [
                     'storage.type',
@@ -380,15 +389,6 @@ def _generateJsonContent(name, colors):
                 ],
                 'settings': {
                     'foreground': colors['color3']
-                }
-            },
-            {
-                'name': 'CSS Tag',
-                'scope': [
-                    'entity.name.tag.css'
-                ],
-                'settings': {
-                    'foreground': colors['color1']
                 }
             },
             {
