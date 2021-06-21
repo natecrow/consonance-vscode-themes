@@ -36,17 +36,12 @@
             {
                 "label": "Consonance - Orange",
                 "uiTheme": "vs-dark",
-                "path": "./themes/orange-50-290-color-theme.json"
+                "path": "./themes/orange-55-295-color-theme.json"
             },
             {
                 "label": "Consonance - Red",
                 "uiTheme": "vs-dark",
                 "path": "./themes/red-25-265-color-theme.json"
-            },
-            {
-                "label": "Consonance - Pink",
-                "uiTheme": "vs-dark",
-                "path": "./themes/pink-345-105-color-theme.json"
             }
         ]
     }
