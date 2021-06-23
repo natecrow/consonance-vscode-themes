@@ -45,11 +45,13 @@ def _generateThemeHexValues(hue, hue2):
         'fg0':          LCHabColor(40, 15, hue2, obs, ill),
         'fg1':          LCHabColor(60, 15, hue2, obs, ill),
         'fg2':          LCHabColor(80, 15, hue2, obs, ill),
+        'fg3':          LCHabColor(90, 15, hue2, obs, ill),
         # color
         'color0':       LCHabColor(50, 20, hue, obs, ill),
         'color1':       LCHabColor(60, 50, hue, obs, ill),
         'color2':       LCHabColor(70, 20, hue, obs, ill),
         'color3':       LCHabColor(80, 50, hue, obs, ill),
+        'color4':       LCHabColor(90, 15, hue, obs, ill),
         # red, green, blue, orange
         'red':          LCHabColor(60, 50, 25, obs, ill),
         'orange':       LCHabColor(60, 50, 55, obs, ill),
@@ -63,7 +65,6 @@ def _generateThemeHexValues(hue, hue2):
         'bg1.5':                LCHabColor(20, 0, 0, obs, ill),
         'bg3':                  LCHabColor(30, 0, 0, obs, ill),
         'bg3.5':                LCHabColor(40, 0, 0, obs, ill),
-        'fg3':                  LCHabColor(90, 15, hue2, obs, ill),
         'focusBorder':          LCHabColor(40, 40, hue, obs, ill),
         'hoverBg':              LCHabColor(47, 40, hue, obs, ill),
         'btnBadgeBg':           LCHabColor(40, 25, hue, obs, ill),
@@ -475,10 +476,36 @@ def _generateJsonContent(name, colors):
                 }
             }
         ],
-        # "semanticHighlighting": true,
-        # "semanticTokenColors": {
-        #     "variable.readonly:java": "#ff0011"
-        # }
+        "semanticHighlighting": "true",
+        "semanticTokenColors": {
+            # Type declarations
+            "class.declaration": {
+                "foreground": colors['fg3'],
+                "bold": "true"
+            },
+            "enum.declaration": {
+                "foreground": colors['fg3'],
+                "bold": "true"
+            },
+            "interface.declaration": {
+                "foreground": colors['fg3'],
+                "bold": "true"
+            },
+            "struct.declaration": {
+                "foreground": colors['fg3'],
+                "bold": "true"
+            },
+
+            # Function declarations
+            "method.declaration": {
+                "foreground": colors['color4'],
+                "bold": "true"
+            },
+            "function.declaration": {
+                "foreground": colors['color4'],
+                "bold": "true"
+            }
+        }
     }
 
 
