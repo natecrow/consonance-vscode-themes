@@ -14,22 +14,22 @@
     "contributes": {
         "themes": [
             {
-                "label": "Consonance - Purple 315",
+                "label": "Consonance - Purple",
                 "uiTheme": "vs-dark",
                 "path": "./themes/purple-315-75-color-theme.json"
             },
             {
-                "label": "Consonance - Purple 300",
+                "label": "Consonance - Violet",
                 "uiTheme": "vs-dark",
-                "path": "./themes/purple-300-60-color-theme.json"
+                "path": "./themes/violet-300-60-color-theme.json"
             },
             {
-                "label": "Consonance - Green",
+                "label": "Consonance - Green (cooler)",
                 "uiTheme": "vs-dark",
                 "path": "./themes/green-150-270-color-theme.json"
             },
             {
-                "label": "Consonance - Green 120",
+                "label": "Consonance - Green (warmer)",
                 "uiTheme": "vs-dark",
                 "path": "./themes/green-120-240-color-theme.json"
             },
