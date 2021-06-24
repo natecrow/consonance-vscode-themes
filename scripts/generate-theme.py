@@ -51,7 +51,6 @@ def _generateThemeHexValues(hue, hue2):
         'color1':       LCHabColor(60, 50, hue, obs, ill),
         'color2':       LCHabColor(70, 20, hue, obs, ill),
         'color3':       LCHabColor(80, 50, hue, obs, ill),
-        'color4':       LCHabColor(90, 15, hue, obs, ill),
         # red, green, blue, orange
         'red':          LCHabColor(60, 50, 25, obs, ill),
         'orange':       LCHabColor(60, 50, 55, obs, ill),
@@ -478,31 +477,12 @@ def _generateJsonContent(name, colors):
         ],
         "semanticHighlighting": "true",
         "semanticTokenColors": {
-            # Type declarations
-            "class.declaration": {
-                "foreground": colors['fg3'],
-                "bold": "true"
-            },
-            "enum.declaration": {
-                "foreground": colors['fg3'],
-                "bold": "true"
-            },
-            "interface.declaration": {
-                "foreground": colors['fg3'],
-                "bold": "true"
-            },
-            "struct.declaration": {
-                "foreground": colors['fg3'],
-                "bold": "true"
-            },
-
-            # Function declarations
             "method.declaration": {
-                "foreground": colors['color4'],
+                "foreground": colors['fg3'],
                 "bold": "true"
             },
             "function.declaration": {
-                "foreground": colors['color4'],
+                "foreground": colors['fg3'],
                 "bold": "true"
             }
         }
