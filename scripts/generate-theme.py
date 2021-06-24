@@ -52,13 +52,13 @@ def _generateThemeHexValues(hue, hue2):
         'color2':       LCHabColor(70, 20, hue, obs, ill),
         'color3':       LCHabColor(80, 50, hue, obs, ill),
         # red, green, blue, orange
-        'red':          LCHabColor(60, 50, 25, obs, ill),
-        'orange':       LCHabColor(60, 50, 55, obs, ill),
-        'green':        LCHabColor(60, 50, 145, obs, ill),
-        'blue':         LCHabColor(60, 50, 265, obs, ill),
-        'darkRed':      LCHabColor(20, 20, 25, obs, ill),
-        'darkOrange':   LCHabColor(20, 20, 55, obs, ill),
-        'darkBlue':     LCHabColor(20, 20, 265, obs, ill),
+        'red':          LCHabColor(60, 50, 30, obs, ill),
+        'orange':       LCHabColor(60, 50, 60, obs, ill),
+        'green':        LCHabColor(60, 50, 150, obs, ill),
+        'blue':         LCHabColor(60, 50, 270, obs, ill),
+        'darkRed':      LCHabColor(20, 20, 30, obs, ill),
+        'darkOrange':   LCHabColor(20, 20, 60, obs, ill),
+        'darkBlue':     LCHabColor(20, 20, 270, obs, ill),
 
         # UI / NON-EDITOR
         'bg1.5':                LCHabColor(20, 0, 0, obs, ill),
