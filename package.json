@@ -14,39 +14,14 @@
     "contributes": {
         "themes": [
             {
-                "label": "Consonance - Purple",
-                "uiTheme": "vs-dark",
-                "path": "./themes/purple-315-75-color-theme.json"
-            },
-            {
-                "label": "Consonance - Violet",
-                "uiTheme": "vs-dark",
-                "path": "./themes/violet-300-60-color-theme.json"
-            },
-            {
-                "label": "Consonance - Green (cooler)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/green-150-270-color-theme.json"
-            },
-            {
-                "label": "Consonance - Green (warmer)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/green-120-240-color-theme.json"
-            },
-            {
                 "label": "Consonance - Blue",
                 "uiTheme": "vs-dark",
                 "path": "./themes/blue-270-30-color-theme.json"
             },
             {
-                "label": "Consonance - Orange",
-                "uiTheme": "vs-dark",
-                "path": "./themes/orange-60-300-color-theme.json"
-            },
-            {
-                "label": "Consonance - Red",
-                "uiTheme": "vs-dark",
-                "path": "./themes/red-30-270-color-theme.json"
+                "label": "Consonance - Blue",
+                "uiTheme": "vs",
+                "path": "./themes/blue-270-30-light-color-theme.json"
             },
             {
                 "label": "Consonance - Gold",
@@ -54,9 +29,79 @@
                 "path": "./themes/gold-90-210-color-theme.json"
             },
             {
+                "label": "Consonance - Gold",
+                "uiTheme": "vs",
+                "path": "./themes/gold-90-210-light-color-theme.json"
+            },
+            {
+                "label": "Consonance - Green (cooler)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/green-150-270-color-theme.json"
+            },
+            {
+                "label": "Consonance - Green (cooler)",
+                "uiTheme": "vs",
+                "path": "./themes/green-150-270-light-color-theme.json"
+            },
+            {
+                "label": "Consonance - Green (warmer)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/green-120-240-color-theme.json"
+            },
+            {
+                "label": "Consonance - Green (warmer)",
+                "uiTheme": "vs",
+                "path": "./themes/green-120-240-light-color-theme.json"
+            },
+            {
+                "label": "Consonance - Orange",
+                "uiTheme": "vs-dark",
+                "path": "./themes/orange-60-300-color-theme.json"
+            },
+            {
+                "label": "Consonance - Orange",
+                "uiTheme": "vs",
+                "path": "./themes/orange-60-300-light-color-theme.json"
+            },
+            {
+                "label": "Consonance - Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/purple-315-75-color-theme.json"
+            },
+            {
+                "label": "Consonance - Purple",
+                "uiTheme": "vs",
+                "path": "./themes/purple-315-75-light-color-theme.json"
+            },
+            {
+                "label": "Consonance - Red",
+                "uiTheme": "vs-dark",
+                "path": "./themes/red-30-270-color-theme.json"
+            },
+            {
+                "label": "Consonance - Red",
+                "uiTheme": "vs",
+                "path": "./themes/red-30-270-light-color-theme.json"
+            },
+            {
                 "label": "Consonance - Teal",
                 "uiTheme": "vs-dark",
                 "path": "./themes/teal-210-90-color-theme.json"
+            },
+            {
+                "label": "Consonance - Teal",
+                "uiTheme": "vs",
+                "path": "./themes/teal-210-90-light-color-theme.json"
+            },
+            {
+                "label": "Consonance - Violet",
+                "uiTheme": "vs-dark",
+                "path": "./themes/violet-300-60-color-theme.json"
+            },
+            {
+                "label": "Consonance - Violet",
+                "uiTheme": "vs",
+                "path": "./themes/violet-300-60-light-color-theme.json"
             }
         ]
     }
