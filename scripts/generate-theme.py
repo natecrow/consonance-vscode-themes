@@ -75,24 +75,24 @@ def _generateThemeHexValues(hue, hue2):
         'black':                LCHabColor(0, 0, 0, obs, ill),
 
         # TERMINAL
-        "term.foreground":          LCHabColor(75, 15, hue2, obs, ill),
+        "term.foreground":          LCHabColor(80, 15, hue2, obs, ill),
         "term.background":          LCHabColor(10, 0, 0, obs, ill),
         "term.ansiBlack":           LCHabColor(0, 0, 0, obs, ill),
-        "term.ansiBrightBlack":     LCHabColor(45, 15, hue2, obs, ill),
-        "term.ansiBlue":            LCHabColor(45, 15, hue2, obs, ill),
-        "term.ansiBrightBlue":      LCHabColor(45, 15, hue2, obs, ill),
-        "term.ansiCyan":            LCHabColor(60, 20, hue, obs, ill),
-        "term.ansiBrightCyan":      LCHabColor(60, 20, hue, obs, ill),
-        "term.ansiGreen":           LCHabColor(60, 50, hue, obs, ill),
-        "term.ansiBrightGreen":     LCHabColor(60, 50, hue, obs, ill),
-        "term.ansiMagenta":         LCHabColor(45, 50, hue, obs, ill),
-        "term.ansiBrightMagenta":   LCHabColor(45, 50, hue, obs, ill),
-        "term.ansiRed":             LCHabColor(75, 20, hue, obs, ill),
-        "term.ansiBrightRed":       LCHabColor(75, 20, hue, obs, ill),
-        "term.ansiYellow":          LCHabColor(75, 50, hue, obs, ill),
-        "term.ansiBrightYellow":    LCHabColor(75, 50, hue, obs, ill),
+        "term.ansiBrightBlack":     LCHabColor(50, 15, hue2, obs, ill),
+        "term.ansiBlue":            LCHabColor(50, 15, hue2, obs, ill),
+        "term.ansiBrightBlue":      LCHabColor(50, 15, hue2, obs, ill),
+        "term.ansiCyan":            LCHabColor(65, 20, hue, obs, ill),
+        "term.ansiBrightCyan":      LCHabColor(65, 20, hue, obs, ill),
+        "term.ansiGreen":           LCHabColor(65, 50, hue, obs, ill),
+        "term.ansiBrightGreen":     LCHabColor(65, 50, hue, obs, ill),
+        "term.ansiMagenta":         LCHabColor(50, 50, hue, obs, ill),
+        "term.ansiBrightMagenta":   LCHabColor(50, 50, hue, obs, ill),
+        "term.ansiRed":             LCHabColor(80, 20, hue, obs, ill),
+        "term.ansiBrightRed":       LCHabColor(80, 20, hue, obs, ill),
+        "term.ansiYellow":          LCHabColor(80, 50, hue, obs, ill),
+        "term.ansiBrightYellow":    LCHabColor(80, 50, hue, obs, ill),
         "term.ansiWhite":           LCHabColor(90, 15, hue2, obs, ill),
-        "term.ansiBrightWhite":     LCHabColor(90, 15, hue2, obs, ill)
+        "term.ansiBrightWhite":     LCHabColor(100, 15, hue2, obs, ill)
     }
 
     rgb_colors = {}
