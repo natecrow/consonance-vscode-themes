@@ -64,14 +64,24 @@
                 "path": "./themes/orange-60-300-light-color-theme.json"
             },
             {
-                "label": "Consonance - Purple",
+                "label": "Consonance - Purple (cooler)",
                 "uiTheme": "vs-dark",
-                "path": "./themes/purple-315-75-color-theme.json"
+                "path": "./themes/purple-300-60-color-theme.json"
             },
             {
-                "label": "Consonance - Purple",
+                "label": "Consonance - Purple (cooler)",
                 "uiTheme": "vs",
-                "path": "./themes/purple-315-75-light-color-theme.json"
+                "path": "./themes/purple-300-60-light-color-theme.json"
+            },
+            {
+                "label": "Consonance - Purple (warmer)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/purple-320-80-color-theme.json"
+            },
+            {
+                "label": "Consonance - Purple (warmer)",
+                "uiTheme": "vs",
+                "path": "./themes/purple-320-80-light-color-theme.json"
             },
             {
                 "label": "Consonance - Red",
@@ -92,16 +102,6 @@
                 "label": "Consonance - Teal",
                 "uiTheme": "vs",
                 "path": "./themes/teal-210-90-light-color-theme.json"
-            },
-            {
-                "label": "Consonance - Violet",
-                "uiTheme": "vs-dark",
-                "path": "./themes/violet-300-60-color-theme.json"
-            },
-            {
-                "label": "Consonance - Violet",
-                "uiTheme": "vs",
-                "path": "./themes/violet-300-60-light-color-theme.json"
             }
         ]
     }
