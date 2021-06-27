@@ -4,7 +4,7 @@
     "description": "Collection of simple color themes that each consist of one primary hue.",
     "version": "0.0.1",
     "author": "Nate Crow (https://github.com/natecrow)",
-    "publisher": "Nate Crow",
+    "publisher": "natecrow",
     "engines": {
         "vscode": "^1.45.0"
     },

@@ -2,14 +2,14 @@
 	"semanticTokenColors": {
 		"method.declaration": {
 			"foreground": "#002025",
-			"bold": "true"
+			"bold": true
 		},
 		"function.declaration": {
 			"foreground": "#002025",
-			"bold": "true"
+			"bold": true
 		}
 	},
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"name": "gold-90-210-light",
 	"tokenColors": [
 		{

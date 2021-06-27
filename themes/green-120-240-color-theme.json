@@ -174,7 +174,7 @@
 		"editorOverviewRuler.incomingContentForeground": "#5793e980",
 		"list.highlightForeground": "#c8e7fb"
 	},
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"name": "green-120-240",
 	"tokenColors": [
 		{
@@ -357,11 +357,11 @@
 	"semanticTokenColors": {
 		"function.declaration": {
 			"foreground": "#c8e7fb",
-			"bold": "true"
+			"bold": true
 		},
 		"method.declaration": {
 			"foreground": "#c8e7fb",
-			"bold": "true"
+			"bold": true
 		}
 	}
 }

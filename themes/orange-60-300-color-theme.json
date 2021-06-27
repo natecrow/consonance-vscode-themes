@@ -1,13 +1,13 @@
 {
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		"function.declaration": {
 			"foreground": "#e8defb",
-			"bold": "true"
+			"bold": true
 		},
 		"method.declaration": {
 			"foreground": "#e8defb",
-			"bold": "true"
+			"bold": true
 		}
 	},
 	"name": "orange-60-300",

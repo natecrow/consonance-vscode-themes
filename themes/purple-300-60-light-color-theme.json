@@ -1,5 +1,5 @@
 {
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"name": "purple-300-60-light",
 	"tokenColors": [
 		{
@@ -182,11 +182,11 @@
 	"semanticTokenColors": {
 		"method.declaration": {
 			"foreground": "#291705",
-			"bold": "true"
+			"bold": true
 		},
 		"function.declaration": {
 			"foreground": "#291705",
-			"bold": "true"
+			"bold": true
 		}
 	},
 	"colors": {

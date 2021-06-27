@@ -179,11 +179,11 @@
 	],
 	"semanticTokenColors": {
 		"function.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#2d1411"
 		},
 		"method.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#2d1411"
 		}
 	},
@@ -363,5 +363,5 @@
 		"scrollbar.shadow": "#ffffff"
 	},
 	"name": "blue-270-30-light",
-	"semanticHighlighting": "true"
+	"semanticHighlighting": true
 }

@@ -177,15 +177,15 @@
 	},
 	"semanticTokenColors": {
 		"method.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#c1eaf0"
 		},
 		"function.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#c1eaf0"
 		}
 	},
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"tokenColors": [
 		{
 			"name": "Keyword, storage, tag",

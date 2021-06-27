@@ -2,11 +2,11 @@
 	"semanticTokenColors": {
 		"function.declaration": {
 			"foreground": "#001f2d",
-			"bold": "true"
+			"bold": true
 		},
 		"method.declaration": {
 			"foreground": "#001f2d",
-			"bold": "true"
+			"bold": true
 		}
 	},
 	"colors": {
@@ -362,6 +362,6 @@
 			"name": "Invalid"
 		}
 	],
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"name": "green-120-240-light"
 }

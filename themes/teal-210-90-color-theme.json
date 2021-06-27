@@ -175,7 +175,7 @@
 		"editor.wordHighlightStrongBackground": "#a38f3230",
 		"terminal.ansiBrightCyan": "#70a7af"
 	},
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"tokenColors": [
 		{
 			"name": "Keyword, storage, tag",
@@ -357,11 +357,11 @@
 	"semanticTokenColors": {
 		"function.declaration": {
 			"foreground": "#ebe2c6",
-			"bold": "true"
+			"bold": true
 		},
 		"method.declaration": {
 			"foreground": "#ebe2c6",
-			"bold": "true"
+			"bold": true
 		}
 	}
 }

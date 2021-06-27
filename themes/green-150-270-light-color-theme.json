@@ -356,12 +356,12 @@
 	"semanticTokenColors": {
 		"function.declaration": {
 			"foreground": "#101c30",
-			"bold": "true"
+			"bold": true
 		},
 		"method.declaration": {
 			"foreground": "#101c30",
-			"bold": "true"
+			"bold": true
 		}
 	},
-	"semanticHighlighting": "true"
+	"semanticHighlighting": true
 }

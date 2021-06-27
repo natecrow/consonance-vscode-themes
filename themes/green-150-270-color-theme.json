@@ -2,14 +2,14 @@
 	"semanticTokenColors": {
 		"function.declaration": {
 			"foreground": "#d7e3ff",
-			"bold": "true"
+			"bold": true
 		},
 		"method.declaration": {
 			"foreground": "#d7e3ff",
-			"bold": "true"
+			"bold": true
 		}
 	},
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"tokenColors": [
 		{
 			"settings": {

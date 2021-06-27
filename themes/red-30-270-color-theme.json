@@ -1,11 +1,11 @@
 {
 	"semanticTokenColors": {
 		"method.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#d7e3ff"
 		},
 		"function.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#d7e3ff"
 		}
 	},
@@ -363,5 +363,5 @@
 		"list.focusBackground": "#3b3b3b",
 		"editorIndentGuide.activeBackground": "#5e5e5e"
 	},
-	"semanticHighlighting": "true"
+	"semanticHighlighting": true
 }

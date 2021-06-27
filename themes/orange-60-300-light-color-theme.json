@@ -2,11 +2,11 @@
 	"name": "orange-60-300-light",
 	"semanticTokenColors": {
 		"method.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#1e182d"
 		},
 		"function.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#1e182d"
 		}
 	},
@@ -363,5 +363,5 @@
 			"scope": "invalid"
 		}
 	],
-	"semanticHighlighting": "true"
+	"semanticHighlighting": true
 }

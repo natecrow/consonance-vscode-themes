@@ -2,11 +2,11 @@
 	"semanticTokenColors": {
 		"method.declaration": {
 			"foreground": "#f0e0c6",
-			"bold": "true"
+			"bold": true
 		},
 		"function.declaration": {
 			"foreground": "#f0e0c6",
-			"bold": "true"
+			"bold": true
 		}
 	},
 	"tokenColors": [
@@ -188,7 +188,7 @@
 		}
 	],
 	"name": "purple-320-80",
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"colors": {
 		"activityBarBadge.background": "#745379",
 		"peekViewTitleLabel.foreground": "#f0e0c6",

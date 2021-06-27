@@ -353,15 +353,15 @@
 		}
 	],
 	"name": "purple-320-80-light",
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		"function.declaration": {
 			"foreground": "#241a00",
-			"bold": "true"
+			"bold": true
 		},
 		"method.declaration": {
 			"foreground": "#241a00",
-			"bold": "true"
+			"bold": true
 		}
 	}
 }

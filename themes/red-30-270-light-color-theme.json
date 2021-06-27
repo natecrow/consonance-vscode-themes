@@ -354,14 +354,14 @@
 	],
 	"semanticTokenColors": {
 		"function.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#101c30"
 		},
 		"method.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#101c30"
 		}
 	},
 	"name": "red-30-270-light",
-	"semanticHighlighting": "true"
+	"semanticHighlighting": true
 }

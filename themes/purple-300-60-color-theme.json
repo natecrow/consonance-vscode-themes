@@ -352,15 +352,15 @@
 		"progressBar.background": "#755db4",
 		"editorGroup.border": "#705a49"
 	},
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"name": "purple-300-60",
 	"semanticTokenColors": {
 		"function.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#f8ddca"
 		},
 		"method.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#f8ddca"
 		}
 	}

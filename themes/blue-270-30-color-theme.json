@@ -1,12 +1,12 @@
 {
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		"function.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#ffd9d5"
 		},
 		"method.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#ffd9d5"
 		}
 	},

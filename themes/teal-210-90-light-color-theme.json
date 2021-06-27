@@ -353,14 +353,14 @@
 		"terminal.ansiMagenta": "#008ba0",
 		"statusBar.debuggingForeground": "#211b00"
 	},
-	"semanticHighlighting": "true",
+	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		"function.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#211b00"
 		},
 		"method.declaration": {
-			"bold": "true",
+			"bold": true,
 			"foreground": "#211b00"
 		}
 	}
