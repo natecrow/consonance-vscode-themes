@@ -23,18 +23,18 @@ bg1     | 15 | 0  | 0    | line highlight
 bg2     | 25 | 0  | 0    | selection
 fg0     | 40 | 15 | hue2 | whitespace foreground
 fg1     | 60 | 15 | hue2 | keywords, storage, tags, storage types, attributes
-fg2     | 80 | 15 | hue2 | default foreground, entities, cursor
-fg3     | 90 | 15 | hue2 | method and function declarations
+fg2     | 80 | 15 | hue2 | default foreground, entities, cursor, markup bold, markup italic
+fg3     | 90 | 15 | hue2 | method/function declarations
 color0  | 50 | 20 | hue1 | comments, markup quotes
 color1  | 60 | 50 | hue1 | strings, CSS tags, links
-color2  | 70 | 20 | hue1 | variables
+color2  | 70 | 20 | hue1 | variables, markup underline, markup raw
 color3  | 80 | 50 | hue1 | constants, HTML tags, markup headings
 red     | 60 | 50 | 30   | errors, invalid, diff deleted
 orange  | 60 | 50 | 60   | warnings
 green   | 60 | 50 | 150  | diff inserted
 blue    | 60 | 50 | 270  | diff changed
 
-Italics are used for comments, library/support entities, storage types, and attributes. Bold is used for method and function declarations.
+Italics are used for comments, library/support entities, storage types, attributes, and markup italic. Bold is used for method/function declarations and markup bold.
 
 ### Light
 

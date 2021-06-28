@@ -23,4 +23,4 @@ python generate-theme-light.py red-30-270-light 30 270
 python generate-theme-light.py teal-210-90-light 210 90
 
 # Remove quotes around "true" in generated themes so it becomes a boolean instead of a string
-sed -i 's/\"true\"/true/g' ../themes/*
+sed -i 's/\"true\"/true/g' *color-theme.json

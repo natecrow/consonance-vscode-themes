@@ -445,22 +445,49 @@ def _generateJsonContent(name, colors):
                 }
             },
             {
-                'name': 'Markup styling',
+                'name': 'Markup bold',
                 'scope': [
-                    'markup.bold',
-                    'markup.italic',
+                    'markup.bold'
+                ],
+                'settings': {
+                    'foreground': colors['fg2'],
+                    'fontStyle': 'bold'
+                }
+            },
+            {
+                'name': 'Markup italic',
+                'scope': [
+                    'markup.italic'
+                ],
+                'settings': {
+                    'foreground': colors['fg2'],
+                    'fontStyle': 'italic'
+                }
+            },
+            {
+                'name': 'Markup underline',
+                'scope': [
                     'markup.underline'
                 ],
                 'settings': {
-                    'foreground': colors['color1']
+                    'foreground': colors['color2'],
+                    'fontStyle': 'underline'
+                }
+            },
+            {
+                'name': 'Markup monospace',
+                'scope': [
+                    'markup.inline.raw',
+                    'markup.raw'
+                ],
+                'settings': {
+                    'foreground': colors['color2']
                 }
             },
             {
                 'name': 'Markup quote',
                 'scope': [
-                    'markup.quote',
-                    'markup.raw.inline',
-                    'markup.raw.block'
+                    'markup.quote'
                 ],
                 'settings': {
                     'foreground': colors['color0']
