@@ -450,7 +450,7 @@ def _generateJsonContent(name, colors):
                     'markup.bold'
                 ],
                 'settings': {
-                    'foreground': colors['fg2'],
+                    'foreground': colors['fg3'],
                     'fontStyle': 'bold'
                 }
             },
@@ -475,13 +475,14 @@ def _generateJsonContent(name, colors):
                 }
             },
             {
-                'name': 'Markup monospace',
+                'name': 'Markup code',
                 'scope': [
                     'markup.inline.raw',
+                    'markup.fenced_code',
                     'markup.raw'
                 ],
                 'settings': {
-                    'foreground': colors['color2']
+                    'foreground': colors['color1']
                 }
             },
             {
