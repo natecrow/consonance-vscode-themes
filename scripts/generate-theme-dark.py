@@ -8,33 +8,32 @@ import json
 def main():
     if (len(argv) > 3):
         name = str(argv[1])
-        hue = int(argv[2])
-        hue2 = int(argv[3]) # +/- 120 from primary hue - whichever looks better
+        hue1 = int(argv[2])
+        hue2 = int(argv[3]) # +/- 120 from hue1 - whichever looks better
 
-        generateUniColorVsCodeTheme(name, hue, hue2)
+        generateUniColorVsCodeTheme(name, hue1, hue2)
     else:
         print('Expecting color theme name, primary LCH hue value, and secondary LCH hue value.')
 
 
-def generateUniColorVsCodeTheme(name, hue, hue2):
+def generateUniColorVsCodeTheme(name, hue1, hue2):
     '''
     Generates VS Code color theme JSON file from given hues and name.
     Filename is generated automatically based on given name.
     '''
-    colors = _generateThemeHexValues(hue, hue2)
+    colors = _generateThemeHexValues(hue1, hue2)
     filename = name.lower().replace(' ', '-').replace('&', 'and') + '-color-theme.json'
     with open(filename, 'w') as f:
         json.dump(_generateJsonContent(name, colors), f, indent='\t')
     print('Generated color theme:', filename)
 
 
-def _generateThemeHexValues(hue, hue2):
+def _generateThemeHexValues(hue1, hue2):
     '''
     Takes two Lch hue values from 0-360 and generates list of hex values for color theme.
     '''
     obs = '2'
     ill = 'd50'
-    # TODO: handle RGB colors that aren't in LCH range, e.g. LCH(70, 50, 260)
     lch_colors = {
         # EDITOR
         # bgs
@@ -47,10 +46,10 @@ def _generateThemeHexValues(hue, hue2):
         'fg2':          LCHabColor(80, 15, hue2, obs, ill),
         'fg3':          LCHabColor(90, 15, hue2, obs, ill),
         # color
-        'color0':       LCHabColor(50, 20, hue, obs, ill),
-        'color1':       LCHabColor(60, 50, hue, obs, ill),
-        'color2':       LCHabColor(70, 20, hue, obs, ill),
-        'color3':       LCHabColor(80, 50, hue, obs, ill),
+        'color0':       LCHabColor(50, 20, hue1, obs, ill),
+        'color1':       LCHabColor(60, 50, hue1, obs, ill),
+        'color2':       LCHabColor(70, 20, hue1, obs, ill),
+        'color3':       LCHabColor(80, 50, hue1, obs, ill),
         # red, green, blue, orange
         'red':          LCHabColor(60, 50, 30, obs, ill),
         'orange':       LCHabColor(60, 50, 60, obs, ill),
@@ -64,35 +63,35 @@ def _generateThemeHexValues(hue, hue2):
         'bg1.5':                LCHabColor(20, 0, 0, obs, ill),
         'bg3':                  LCHabColor(30, 0, 0, obs, ill),
         'bg3.5':                LCHabColor(40, 0, 0, obs, ill),
-        'focusBorder':          LCHabColor(40, 40, hue, obs, ill),
-        'hoverBg':              LCHabColor(47, 40, hue, obs, ill),
-        'btnBadgeBg':           LCHabColor(40, 25, hue, obs, ill),
-        'btnBadgeHoverBg':      LCHabColor(47, 25, hue, obs, ill),
-        'findMatchBg':          LCHabColor(35, 25, hue, obs, ill),
-        'findMatchHlBg':        LCHabColor(25, 20, hue, obs, ill),
-        'progressBarBg':        LCHabColor(45, 50, hue, obs, ill),
+        'focusBorder':          LCHabColor(40, 40, hue1, obs, ill),
+        'hoverBg':              LCHabColor(47, 40, hue1, obs, ill),
+        'btnBadgeBg':           LCHabColor(40, 25, hue1, obs, ill),
+        'btnBadgeHoverBg':      LCHabColor(47, 25, hue1, obs, ill),
+        'findMatchBg':          LCHabColor(35, 25, hue1, obs, ill),
+        'findMatchHlBg':        LCHabColor(25, 20, hue1, obs, ill),
+        'progressBarBg':        LCHabColor(45, 50, hue1, obs, ill),
         'editorWordHlStrongBg': LCHabColor(60, 50, hue2, obs, ill),
         'black':                LCHabColor(0, 0, 0, obs, ill),
 
         # TERMINAL
-        "term.foreground":          LCHabColor(80, 15, hue2, obs, ill),
-        "term.background":          LCHabColor(10, 0, 0, obs, ill),
-        "term.ansiBlack":           LCHabColor(0, 0, 0, obs, ill),
-        "term.ansiBrightBlack":     LCHabColor(50, 15, hue2, obs, ill),
+        "term.ansiBlack":           LCHabColor(0, 0, hue2, obs, ill),
+        "term.ansiRed":             LCHabColor(80, 20, hue1, obs, ill),
+        "term.ansiGreen":           LCHabColor(65, 50, hue1, obs, ill),
+        "term.ansiYellow":          LCHabColor(80, 50, hue1, obs, ill),
         "term.ansiBlue":            LCHabColor(50, 15, hue2, obs, ill),
-        "term.ansiBrightBlue":      LCHabColor(50, 15, hue2, obs, ill),
-        "term.ansiCyan":            LCHabColor(65, 20, hue, obs, ill),
-        "term.ansiBrightCyan":      LCHabColor(65, 20, hue, obs, ill),
-        "term.ansiGreen":           LCHabColor(65, 50, hue, obs, ill),
-        "term.ansiBrightGreen":     LCHabColor(65, 50, hue, obs, ill),
-        "term.ansiMagenta":         LCHabColor(50, 50, hue, obs, ill),
-        "term.ansiBrightMagenta":   LCHabColor(50, 50, hue, obs, ill),
-        "term.ansiRed":             LCHabColor(80, 20, hue, obs, ill),
-        "term.ansiBrightRed":       LCHabColor(80, 20, hue, obs, ill),
-        "term.ansiYellow":          LCHabColor(80, 50, hue, obs, ill),
-        "term.ansiBrightYellow":    LCHabColor(80, 50, hue, obs, ill),
+        "term.ansiMagenta":         LCHabColor(50, 50, hue1, obs, ill),
+        "term.ansiCyan":            LCHabColor(65, 20, hue1, obs, ill),
         "term.ansiWhite":           LCHabColor(90, 15, hue2, obs, ill),
-        "term.ansiBrightWhite":     LCHabColor(100, 15, hue2, obs, ill)
+        "term.ansiBrightBlack":     LCHabColor(50, 15, hue2, obs, ill),
+        "term.ansiBrightRed":       LCHabColor(80, 20, hue1, obs, ill),
+        "term.ansiBrightGreen":     LCHabColor(65, 50, hue1, obs, ill),
+        "term.ansiBrightYellow":    LCHabColor(80, 50, hue1, obs, ill),
+        "term.ansiBrightBlue":      LCHabColor(50, 15, hue2, obs, ill),
+        "term.ansiBrightMagenta":   LCHabColor(50, 50, hue1, obs, ill),
+        "term.ansiBrightCyan":      LCHabColor(65, 20, hue1, obs, ill),
+        "term.ansiBrightWhite":     LCHabColor(100, 15, hue2, obs, ill),
+        "term.background":          LCHabColor(10, 0, 0, obs, ill),
+        "term.foreground":          LCHabColor(80, 15, hue2, obs, ill),
     }
 
     rgb_colors = {}
