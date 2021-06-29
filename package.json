@@ -5,6 +5,7 @@
     "version": "0.0.1",
     "author": "Nate Crow (https://github.com/natecrow)",
     "publisher": "natecrow",
+    "repository": "https://github.com/natecrow/consonance-vscode-themes",
     "engines": {
         "vscode": "^1.45.0"
     },
