@@ -49,52 +49,40 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/teal-dark-color-theme.json"
             },
-
-
             {
                 "label": "Consonance Light - Blue",
                 "uiTheme": "vs",
-                "path": "./themes/blue-270-30-light-color-theme.json"
+                "path": "./themes/blue-light-color-theme.json"
+            },
+            {
+                "label": "Consonance Light - Cyan",
+                "uiTheme": "vs",
+                "path": "./themes/cyan-light-color-theme.json"
             },
             {
                 "label": "Consonance Light - Gold",
                 "uiTheme": "vs",
-                "path": "./themes/gold-90-210-light-color-theme.json"
+                "path": "./themes/gold-light-color-theme.json"
             },
             {
-                "label": "Consonance Light - Green (cooler)",
+                "label": "Consonance Light - Green",
                 "uiTheme": "vs",
-                "path": "./themes/green-150-270-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Green (warmer)",
-                "uiTheme": "vs",
-                "path": "./themes/green-120-240-light-color-theme.json"
+                "path": "./themes/green-light-color-theme.json"
             },
             {
                 "label": "Consonance Light - Orange",
                 "uiTheme": "vs",
-                "path": "./themes/orange-60-300-light-color-theme.json"
+                "path": "./themes/orange-light-color-theme.json"
             },
             {
-                "label": "Consonance Light - Purple (cooler)",
+                "label": "Consonance Light - Purple",
                 "uiTheme": "vs",
-                "path": "./themes/purple-300-60-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Purple (warmer)",
-                "uiTheme": "vs",
-                "path": "./themes/purple-320-80-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Red",
-                "uiTheme": "vs",
-                "path": "./themes/red-30-270-light-color-theme.json"
+                "path": "./themes/purple-light-color-theme.json"
             },
             {
                 "label": "Consonance Light - Teal",
                 "uiTheme": "vs",
-                "path": "./themes/teal-210-90-light-color-theme.json"
+                "path": "./themes/teal-light-color-theme.json"
             }
         ]
     }
