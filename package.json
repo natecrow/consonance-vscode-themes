@@ -17,48 +17,40 @@
             {
                 "label": "Consonance Dark - Blue",
                 "uiTheme": "vs-dark",
-                "path": "./themes/blue-270-30-dark-color-theme.json"
+                "path": "./themes/blue-dark-color-theme.json"
+            },
+            {
+                "label": "Consonance Dark - Cyan",
+                "uiTheme": "vs-dark",
+                "path": "./themes/cyan-dark-color-theme.json"
             },
             {
                 "label": "Consonance Dark - Gold",
                 "uiTheme": "vs-dark",
-                "path": "./themes/gold-90-210-dark-color-theme.json"
+                "path": "./themes/gold-dark-color-theme.json"
             },
             {
-                "label": "Consonance Dark - Green (cooler)",
+                "label": "Consonance Dark - Green",
                 "uiTheme": "vs-dark",
-                "path": "./themes/green-150-270-dark-color-theme.json"
-            },
-            {
-                "label": "Consonance Dark - Green (warmer)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/green-120-240-dark-color-theme.json"
+                "path": "./themes/green-dark-color-theme.json"
             },
             {
                 "label": "Consonance Dark - Orange",
                 "uiTheme": "vs-dark",
-                "path": "./themes/orange-60-300-dark-color-theme.json"
+                "path": "./themes/orange-dark-color-theme.json"
             },
             {
-                "label": "Consonance Dark - Purple (cooler)",
+                "label": "Consonance Dark - Purple",
                 "uiTheme": "vs-dark",
-                "path": "./themes/purple-300-60-dark-color-theme.json"
-            },
-            {
-                "label": "Consonance Dark - Purple (warmer)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/purple-320-80-dark-color-theme.json"
-            },
-            {
-                "label": "Consonance Dark - Red",
-                "uiTheme": "vs-dark",
-                "path": "./themes/red-30-270-dark-color-theme.json"
+                "path": "./themes/purple-dark-color-theme.json"
             },
             {
                 "label": "Consonance Dark - Teal",
                 "uiTheme": "vs-dark",
-                "path": "./themes/teal-210-90-dark-color-theme.json"
+                "path": "./themes/teal-dark-color-theme.json"
             },
+
+
             {
                 "label": "Consonance Light - Blue",
                 "uiTheme": "vs",

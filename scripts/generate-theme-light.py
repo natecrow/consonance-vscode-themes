@@ -22,7 +22,7 @@ def generateUniColorVsCodeTheme(name, hue1, hue2):
     Filename is generated automatically based on given name.
     '''
     colors = _generateThemeHexValues(hue1, hue2)
-    filename = name.lower().replace(' ', '-').replace('&', 'and') + '-color-theme.json'
+    filename = name.lower().replace(' ', '-').replace('&', 'and') + '-light-color-theme.json'
     with open(filename, 'w') as f:
         json.dump(_generateJsonContent(name, colors), f, indent='\t')
     print('Generated color theme:', filename)
