@@ -1,7 +1,7 @@
 {
     "name": "consonance-themes",
     "displayName": "Consonance Themes",
-    "description": "Collection of simple color themes that each consist of one primary hue.",
+    "description": "Collection of minimalistic dark color themes that each consist of one primary hue.",
     "version": "0.0.1",
     "author": "Nate Crow (https://github.com/natecrow)",
     "publisher": "natecrow",
@@ -15,74 +15,39 @@
     "contributes": {
         "themes": [
             {
-                "label": "Consonance Dark - Blue",
+                "label": "Consonance - Blue",
                 "uiTheme": "vs-dark",
                 "path": "./themes/blue-dark-color-theme.json"
             },
             {
-                "label": "Consonance Dark - Cyan",
+                "label": "Consonance - Cyan",
                 "uiTheme": "vs-dark",
                 "path": "./themes/cyan-dark-color-theme.json"
             },
             {
-                "label": "Consonance Dark - Gold",
+                "label": "Consonance - Gold",
                 "uiTheme": "vs-dark",
                 "path": "./themes/gold-dark-color-theme.json"
             },
             {
-                "label": "Consonance Dark - Green",
+                "label": "Consonance - Green",
                 "uiTheme": "vs-dark",
                 "path": "./themes/green-dark-color-theme.json"
             },
             {
-                "label": "Consonance Dark - Orange",
+                "label": "Consonance - Orange",
                 "uiTheme": "vs-dark",
                 "path": "./themes/orange-dark-color-theme.json"
             },
             {
-                "label": "Consonance Dark - Purple",
+                "label": "Consonance - Purple",
                 "uiTheme": "vs-dark",
                 "path": "./themes/purple-dark-color-theme.json"
             },
             {
-                "label": "Consonance Dark - Teal",
+                "label": "Consonance - Teal",
                 "uiTheme": "vs-dark",
                 "path": "./themes/teal-dark-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Blue",
-                "uiTheme": "vs",
-                "path": "./themes/blue-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Cyan",
-                "uiTheme": "vs",
-                "path": "./themes/cyan-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Gold",
-                "uiTheme": "vs",
-                "path": "./themes/gold-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Green",
-                "uiTheme": "vs",
-                "path": "./themes/green-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Orange",
-                "uiTheme": "vs",
-                "path": "./themes/orange-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Purple",
-                "uiTheme": "vs",
-                "path": "./themes/purple-light-color-theme.json"
-            },
-            {
-                "label": "Consonance Light - Teal",
-                "uiTheme": "vs",
-                "path": "./themes/teal-light-color-theme.json"
             }
         ]
     }

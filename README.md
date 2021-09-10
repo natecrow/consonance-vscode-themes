@@ -1,6 +1,6 @@
 # Consonance Color Themes for VS Code
 
-Collection of minimalistic dark and light color themes that each consist of one primary hue.
+Collection of minimalistic dark color themes that each consist of one primary hue.
 
 # About
 
@@ -13,8 +13,6 @@ Collection of minimalistic dark and light color themes that each consist of one 
 `hue1` is the primary hue and `hue2` is the secondary hue. `hue2` is 120 degrees away from `hue1`. For more details, see the Python generate-theme scripts in the `scripts` directory in the repo. Those scripts were used to generate the themes and thus are the 'sources of truth'.
 
 ## Editor
-
-### Dark
 
 color   | L  | C  | h    | usage
 ---     |--- |--- |---   | ---
@@ -36,13 +34,7 @@ blue    | 60 | 50 | 270  | diff changed
 
 Italics are used for comments, library/support entities, storage types, attributes, and markup italic. Bold is used for method/function declarations and markup bold.
 
-### Light
-
-Same as the Dark template above, except all the L values are flipped and then the `bg` L values are increased by 5.
-
 ## Terminal
-
-### Dark
 
 color             | L   | C  | h
 ---               |---  |--- |---
@@ -64,7 +56,3 @@ ansiBrightCyan    | 65  | 20 | hue1
 ansiBrightWhite   | 100 | 15 | hue2
 background        | 10  | 0  | 0
 foreground        | 80  | 15 | hue2
-
-### Light
-
-Same as the Dark template above, except all the L values are flipped and then the `background`'s L values are increased by 5.
