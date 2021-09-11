@@ -6,40 +6,34 @@ import json
 
 
 def main():
-    if (len(argv) > 2):
+    if (len(argv) > 3):
         name = str(argv[1])
-        hue = int(argv[2])
+        hue1 = int(argv[2])
+        hue2 = int(argv[3])  # +/- 120 from hue1 - whichever looks better
 
-        generateUniColorVsCodeTheme(name, hue)
+        generateUniColorVsCodeTheme(name, hue1, hue2)
     else:
-        print('Expecting color theme name and an LCH hue value.')
+        print('Expecting color theme name, primary LCH hue value, and secondary LCH hue value.')
 
 
-def generateUniColorVsCodeTheme(name, hue):
+def generateUniColorVsCodeTheme(name, hue1, hue2):
     '''
-    Generates VS Code color theme JSON file from given hue and name.
+    Generates VS Code color theme JSON file from given hues and name.
     Filename is generated automatically based on given name.
     '''
-    hue2 = hue + 120  # can add or subtract - whichever looks better
-    if hue2 > 360:
-        hue2 -= 360
-    elif hue2 < 0:
-        hue2 += 360
-
-    colors = _generateThemeHexValues(hue, hue2)
-    filename = name.lower().replace(' ', '-').replace('&', 'and') + '-color-theme.json'
+    colors = _generateThemeHexValues(hue1, hue2)
+    filename = name.lower().replace(' ', '-').replace('&', 'and') + '-dark-color-theme.json'
     with open(filename, 'w') as f:
         json.dump(_generateJsonContent(name, colors), f, indent='\t')
     print('Generated color theme:', filename)
 
 
-def _generateThemeHexValues(hue, hue2):
+def _generateThemeHexValues(hue1, hue2):
     '''
     Takes two Lch hue values from 0-360 and generates list of hex values for color theme.
     '''
     obs = '2'
     ill = 'd50'
-    # TODO: handle RGB colors that aren't in LCH range, e.g. LCH(70, 50, 260)
     lch_colors = {
         # EDITOR
         # bgs
@@ -47,57 +41,57 @@ def _generateThemeHexValues(hue, hue2):
         'bg1':          LCHabColor(15, 0, 0, obs, ill),
         'bg2':          LCHabColor(25, 0, 0, obs, ill),
         # fgs
-        'fg0':          LCHabColor(30, 15, hue2, obs, ill),
-        'fg1':          LCHabColor(55, 15, hue2, obs, ill),
-        'fg2':          LCHabColor(75, 15, hue2, obs, ill),
+        'fg0':          LCHabColor(40, 10, hue2, obs, ill),
+        'fg1':          LCHabColor(60, 10, hue2, obs, ill),
+        'fg2':          LCHabColor(80, 10, hue2, obs, ill),
+        'fg3':          LCHabColor(90, 10, hue2, obs, ill),
         # color
-        'color0':       LCHabColor(45, 15, hue, obs, ill),
-        'color1':       LCHabColor(55, 50, hue, obs, ill),
-        'color2':       LCHabColor(65, 15, hue, obs, ill),
-        'color3':       LCHabColor(75, 50, hue, obs, ill),
+        'color0':       LCHabColor(50, 20, hue1, obs, ill),
+        'color1':       LCHabColor(60, 50, hue1, obs, ill),
+        'color2':       LCHabColor(70, 20, hue1, obs, ill),
+        'color3':       LCHabColor(80, 50, hue1, obs, ill),
         # red, green, blue, orange
-        'red':          LCHabColor(60, 50, 25, obs, ill),
-        'orange':       LCHabColor(60, 50, 55, obs, ill),
-        'green':        LCHabColor(60, 50, 145, obs, ill),
-        'blue':         LCHabColor(60, 50, 265, obs, ill),
-        'darkRed':      LCHabColor(20, 20, 25, obs, ill),
-        'darkOrange':   LCHabColor(20, 20, 55, obs, ill),
-        'darkBlue':     LCHabColor(20, 20, 265, obs, ill),
+        'red':          LCHabColor(60, 50, 30, obs, ill),
+        'orange':       LCHabColor(60, 50, 60, obs, ill),
+        'green':        LCHabColor(60, 50, 150, obs, ill),
+        'blue':         LCHabColor(60, 50, 270, obs, ill),
+        'darkRed':      LCHabColor(20, 20, 30, obs, ill),
+        'darkOrange':   LCHabColor(20, 20, 60, obs, ill),
+        'darkBlue':     LCHabColor(20, 20, 270, obs, ill),
 
         # UI / NON-EDITOR
         'bg1.5':                LCHabColor(20, 0, 0, obs, ill),
         'bg3':                  LCHabColor(30, 0, 0, obs, ill),
         'bg3.5':                LCHabColor(40, 0, 0, obs, ill),
-        'fg3':                  LCHabColor(90, 15, hue2, obs, ill),
-        'focusBorder':          LCHabColor(40, 40, hue, obs, ill),
-        'hoverBg':              LCHabColor(47, 40, hue, obs, ill),
-        'btnBadgeBg':           LCHabColor(40, 25, hue, obs, ill),
-        'btnBadgeHoverBg':      LCHabColor(47, 25, hue, obs, ill),
-        'findMatchBg':          LCHabColor(35, 25, hue, obs, ill),
-        'findMatchHlBg':        LCHabColor(25, 20, hue, obs, ill),
-        'progressBarBg':        LCHabColor(45, 50, hue, obs, ill),
+        'focusBorder':          LCHabColor(40, 40, hue1, obs, ill),
+        'hoverBg':              LCHabColor(47, 40, hue1, obs, ill),
+        'btnBadgeBg':           LCHabColor(40, 25, hue1, obs, ill),
+        'btnBadgeHoverBg':      LCHabColor(47, 25, hue1, obs, ill),
+        'findMatchBg':          LCHabColor(35, 25, hue1, obs, ill),
+        'findMatchHlBg':        LCHabColor(25, 20, hue1, obs, ill),
+        'progressBarBg':        LCHabColor(45, 50, hue1, obs, ill),
         'editorWordHlStrongBg': LCHabColor(60, 50, hue2, obs, ill),
         'black':                LCHabColor(0, 0, 0, obs, ill),
 
         # TERMINAL
-        "term.foreground":          LCHabColor(75, 15, hue2, obs, ill),
+        "term.ansiBlack":           LCHabColor(0, 0, hue2, obs, ill),
+        "term.ansiRed":             LCHabColor(80, 20, hue1, obs, ill),
+        "term.ansiGreen":           LCHabColor(65, 50, hue1, obs, ill),
+        "term.ansiYellow":          LCHabColor(80, 50, hue1, obs, ill),
+        "term.ansiBlue":            LCHabColor(50, 10, hue2, obs, ill),
+        "term.ansiMagenta":         LCHabColor(50, 50, hue1, obs, ill),
+        "term.ansiCyan":            LCHabColor(65, 20, hue1, obs, ill),
+        "term.ansiWhite":           LCHabColor(90, 10, hue2, obs, ill),
+        "term.ansiBrightBlack":     LCHabColor(50, 10, hue2, obs, ill),
+        "term.ansiBrightRed":       LCHabColor(80, 20, hue1, obs, ill),
+        "term.ansiBrightGreen":     LCHabColor(65, 50, hue1, obs, ill),
+        "term.ansiBrightYellow":    LCHabColor(80, 50, hue1, obs, ill),
+        "term.ansiBrightBlue":      LCHabColor(50, 10, hue2, obs, ill),
+        "term.ansiBrightMagenta":   LCHabColor(50, 50, hue1, obs, ill),
+        "term.ansiBrightCyan":      LCHabColor(65, 20, hue1, obs, ill),
+        "term.ansiBrightWhite":     LCHabColor(100, 10, hue2, obs, ill),
         "term.background":          LCHabColor(10, 0, 0, obs, ill),
-        "term.ansiBlack":           LCHabColor(0, 0, 0, obs, ill),
-        "term.ansiBrightBlack":     LCHabColor(45, 15, hue2, obs, ill),
-        "term.ansiBlue":            LCHabColor(45, 20, hue, obs, ill),
-        "term.ansiBrightBlue":      LCHabColor(45, 20, hue, obs, ill),
-        "term.ansiCyan":            LCHabColor(60, 20, hue, obs, ill),
-        "term.ansiBrightCyan":      LCHabColor(60, 20, hue, obs, ill),
-        "term.ansiGreen":           LCHabColor(75, 20, hue, obs, ill),
-        "term.ansiBrightGreen":     LCHabColor(75, 20, hue, obs, ill),
-        "term.ansiMagenta":         LCHabColor(60, 50, hue, obs, ill),
-        "term.ansiBrightMagenta":   LCHabColor(60, 50, hue, obs, ill),
-        "term.ansiRed":             LCHabColor(45, 50, hue, obs, ill),
-        "term.ansiBrightRed":       LCHabColor(45, 50, hue, obs, ill),
-        "term.ansiYellow":          LCHabColor(75, 50, hue, obs, ill),
-        "term.ansiBrightYellow":    LCHabColor(75, 50, hue, obs, ill),
-        "term.ansiWhite":           LCHabColor(90, 15, hue2, obs, ill),
-        "term.ansiBrightWhite":     LCHabColor(90, 15, hue2, obs, ill)
+        "term.foreground":          LCHabColor(80, 10, hue2, obs, ill),
     }
 
     rgb_colors = {}
@@ -226,7 +220,7 @@ def _generateJsonContent(name, colors):
             "inputValidation.infoBorder": colors['blue'],
             "inputValidation.warningBackground": colors['darkOrange'],
             "inputValidation.warningBorder": colors['orange'],
-            "list.activeSelectionBackground": colors['bg1.5'],
+            "list.activeSelectionBackground": colors['findMatchHlBg'],
             "list.activeSelectionForeground": colors['fg3'],
             "list.dropBackground": colors['bg2'],
             "list.focusBackground": colors['bg2'],
@@ -258,6 +252,9 @@ def _generateJsonContent(name, colors):
             "scrollbarSlider.activeBackground": colors['fg1'] + '80',
             "scrollbarSlider.background": colors['bg3'] + '80',
             "scrollbarSlider.hoverBackground": colors['bg3.5'] + '80',
+            "settings.checkboxBackground": colors['bg1'],
+            "settings.dropdownBackground": colors['bg1'],
+            "settings.textInputBackground": colors['bg1'],
             "sideBar.background": colors['bg1'],
             "sideBarSectionHeader.background": colors['bg1.5'],
             "sideBarTitle.foreground": colors['fg2'],
@@ -321,6 +318,15 @@ def _generateJsonContent(name, colors):
                 ],
                 'settings': {
                     'foreground': colors['color3']
+                }
+            },
+            {
+                'name': 'CSS Tag',
+                'scope': [
+                    'entity.name.tag.css'
+                ],
+                'settings': {
+                    'foreground': colors['color1']
                 }
             },
             {
@@ -388,15 +394,6 @@ def _generateJsonContent(name, colors):
                 }
             },
             {
-                'name': 'CSS Tag',
-                'scope': [
-                    'entity.name.tag.css'
-                ],
-                'settings': {
-                    'foreground': colors['color1']
-                }
-            },
-            {
                 'name': 'Library constant',
                 'scope': 'support.constant',
                 'settings': {
@@ -451,11 +448,41 @@ def _generateJsonContent(name, colors):
                 }
             },
             {
-                'name': 'Markup styling',
+                'name': 'Markup bold',
                 'scope': [
-                    'markup.bold',
-                    'markup.italic',
+                    'markup.bold'
+                ],
+                'settings': {
+                    'foreground': colors['fg3'],
+                    'fontStyle': 'bold'
+                }
+            },
+            {
+                'name': 'Markup italic',
+                'scope': [
+                    'markup.italic'
+                ],
+                'settings': {
+                    'foreground': colors['fg2'],
+                    'fontStyle': 'italic'
+                }
+            },
+            {
+                'name': 'Markup underline',
+                'scope': [
                     'markup.underline'
+                ],
+                'settings': {
+                    'foreground': colors['color2'],
+                    'fontStyle': 'underline'
+                }
+            },
+            {
+                'name': 'Markup code',
+                'scope': [
+                    'markup.inline.raw',
+                    'markup.fenced_code',
+                    'markup.raw'
                 ],
                 'settings': {
                     'foreground': colors['color1']
@@ -464,9 +491,7 @@ def _generateJsonContent(name, colors):
             {
                 'name': 'Markup quote',
                 'scope': [
-                    'markup.quote',
-                    'markup.raw.inline',
-                    'markup.raw.block'
+                    'markup.quote'
                 ],
                 'settings': {
                     'foreground': colors['color0']
@@ -480,10 +505,17 @@ def _generateJsonContent(name, colors):
                 }
             }
         ],
-        # "semanticHighlighting": true,
-        # "semanticTokenColors": {
-        #     "variable.readonly:java": "#ff0011"
-        # }
+        "semanticHighlighting": "true",
+        "semanticTokenColors": {
+            "method.declaration": {
+                "foreground": colors['fg3'],
+                "bold": "true"
+            },
+            "function.declaration": {
+                "foreground": colors['fg3'],
+                "bold": "true"
+            }
+        }
     }
 
 
