@@ -220,7 +220,7 @@ def _generateJsonContent(name, colors):
             "inputValidation.infoBorder": colors['blue'],
             "inputValidation.warningBackground": colors['darkOrange'],
             "inputValidation.warningBorder": colors['orange'],
-            "list.activeSelectionBackground": colors['bg1.5'],
+            "list.activeSelectionBackground": colors['findMatchHlBg'],
             "list.activeSelectionForeground": colors['fg3'],
             "list.dropBackground": colors['bg2'],
             "list.focusBackground": colors['bg2'],
