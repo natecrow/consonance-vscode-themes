@@ -20,11 +20,6 @@
                 "path": "./themes/blue-dark-color-theme.json"
             },
             {
-                "label": "Consonance - Cyan",
-                "uiTheme": "vs-dark",
-                "path": "./themes/cyan-dark-color-theme.json"
-            },
-            {
                 "label": "Consonance - Gold",
                 "uiTheme": "vs-dark",
                 "path": "./themes/gold-dark-color-theme.json"
