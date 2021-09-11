@@ -2,15 +2,27 @@
     "name": "consonance-themes",
     "displayName": "Consonance Themes",
     "description": "Collection of minimalistic dark color themes that each consist of one primary hue.",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "author": "Nate Crow (https://github.com/natecrow)",
     "publisher": "natecrow",
-    "repository": "https://github.com/natecrow/consonance-vscode-themes",
+    "license": "GPL-3.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/natecrow/consonance-vscode-themes.git"
+    },
+    "homepage": "https://github.com/natecrow/consonance-vscode-themes",
     "engines": {
         "vscode": "^1.45.0"
     },
     "categories": [
         "Themes"
+    ],
+    "galleryBanner": {
+        "color": "#1b1b1b",
+        "theme": "dark"
+    },
+    "keywords": [
+        "VSCode", "Themes", "Consonance"
     ],
     "contributes": {
         "themes": [
