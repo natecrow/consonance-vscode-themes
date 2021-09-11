@@ -10,7 +10,8 @@ Collection of minimalistic dark color themes that each consist of one primary hu
 
 # Templates
 
-`hue1` is the primary hue and `hue2` is the secondary hue. `hue2` is 120 degrees away from `hue1`. For more details, see the Python generate-theme scripts in the `scripts` directory in the repo. Those scripts were used to generate the themes and thus are the 'sources of truth'.
+`hue1` is the primary hue and `hue2` is the secondary hue. `hue2` is 120 degrees away from `hue1`.
+For more details see the `generate-theme-dark.py` script in the repo, which was used to generate the themes.
 
 ## Editor
 
@@ -19,10 +20,10 @@ color   | L  | C  | h    | usage
 bg0     | 10 | 0  | 0    | default background
 bg1     | 15 | 0  | 0    | line highlight
 bg2     | 25 | 0  | 0    | selection
-fg0     | 40 | 15 | hue2 | whitespace foreground
-fg1     | 60 | 15 | hue2 | keywords, storage, tags, storage types, attributes
-fg2     | 80 | 15 | hue2 | default foreground, entities, cursor, markup italic
-fg3     | 90 | 15 | hue2 | method/function declarations, markup bold
+fg0     | 40 | 10 | hue2 | whitespace foreground
+fg1     | 60 | 10 | hue2 | keywords, storage, tags, storage types, attributes
+fg2     | 80 | 10 | hue2 | default foreground, entities, cursor, markup italic
+fg3     | 90 | 10 | hue2 | method/function declarations, markup bold
 color0  | 50 | 20 | hue1 | comments, markup quotes
 color1  | 60 | 50 | hue1 | strings, CSS tags, markup code
 color2  | 70 | 20 | hue1 | variables, markup underline
@@ -42,17 +43,17 @@ ansiBlack         | 0   | 0  | hue2
 ansiRed           | 80  | 20 | hue1
 ansiGreen         | 65  | 50 | hue1
 ansiYellow        | 80  | 50 | hue1
-ansiBlue          | 50  | 15 | hue2
+ansiBlue          | 50  | 10 | hue2
 ansiMagenta       | 50  | 50 | hue1
 ansiCyan          | 65  | 20 | hue1
-ansiWhite         | 90  | 15 | hue2
-ansiBrightBlack   | 50  | 15 | hue2
+ansiWhite         | 90  | 10 | hue2
+ansiBrightBlack   | 50  | 10 | hue2
 ansiBrightRed     | 80  | 20 | hue1
 ansiBrightGreen   | 65  | 50 | hue1
 ansiBrightYellow  | 80  | 50 | hue1
-ansiBrightBlue    | 50  | 15 | hue2
+ansiBrightBlue    | 50  | 10 | hue2
 ansiBrightMagenta | 50  | 50 | hue1
 ansiBrightCyan    | 65  | 20 | hue1
-ansiBrightWhite   | 100 | 15 | hue2
+ansiBrightWhite   | 100 | 10 | hue2
 background        | 10  | 0  | 0
-foreground        | 80  | 15 | hue2
+foreground        | 80  | 10 | hue2
