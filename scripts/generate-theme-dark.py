@@ -9,7 +9,7 @@ def main():
     if (len(argv) > 3):
         name = str(argv[1])
         hue1 = int(argv[2])
-        hue2 = int(argv[3]) # +/- 120 from hue1 - whichever looks better
+        hue2 = int(argv[3])  # +/- 120 from hue1 - whichever looks better
 
         generateUniColorVsCodeTheme(name, hue1, hue2)
     else:
@@ -252,6 +252,9 @@ def _generateJsonContent(name, colors):
             "scrollbarSlider.activeBackground": colors['fg1'] + '80',
             "scrollbarSlider.background": colors['bg3'] + '80',
             "scrollbarSlider.hoverBackground": colors['bg3.5'] + '80',
+            "settings.checkboxBackground": colors['bg1'],
+            "settings.dropdownBackground": colors['bg1'],
+            "settings.textInputBackground": colors['bg1'],
             "sideBar.background": colors['bg1'],
             "sideBarSectionHeader.background": colors['bg1.5'],
             "sideBarTitle.foreground": colors['fg2'],
