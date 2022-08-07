@@ -37,9 +37,9 @@ def _generateThemeHexValues(hue1, hue2):
     lch_colors = {
         # EDITOR
         # bgs
-        'bg0':          LCHabColor(10, 0, 0, obs, ill),
-        'bg1':          LCHabColor(15, 0, 0, obs, ill),
-        'bg2':          LCHabColor(25, 0, 0, obs, ill),
+        'bg0':          LCHabColor(5, 0, 0, obs, ill),
+        'bg1':          LCHabColor(10, 0, 0, obs, ill),
+        'bg2':          LCHabColor(20, 0, 0, obs, ill),
         # fgs
         'fg0':          LCHabColor(40, 10, hue2, obs, ill),
         'fg1':          LCHabColor(60, 10, hue2, obs, ill),
@@ -64,10 +64,10 @@ def _generateThemeHexValues(hue1, hue2):
         'dullBlue':     LCHabColor(60, 20, 270, obs, ill),
 
         # UI / NON-EDITOR
-        'bg00':                 LCHabColor(5, 0, 0, obs, ill),
-        'bg1.5':                LCHabColor(20, 0, 0, obs, ill),
-        'bg3':                  LCHabColor(30, 0, 0, obs, ill),
-        'bg3.5':                LCHabColor(40, 0, 0, obs, ill),
+        'bg00':                 LCHabColor(0, 0, 0, obs, ill),
+        'bg1.5':                LCHabColor(15, 0, 0, obs, ill),
+        'bg3':                  LCHabColor(25, 0, 0, obs, ill),
+        'bg3.5':                LCHabColor(35, 0, 0, obs, ill),
         'focusBorder':          LCHabColor(40, 40, hue1, obs, ill),
         'hoverBg':              LCHabColor(47, 40, hue1, obs, ill),
         'btnBadgeBg':           LCHabColor(40, 25, hue1, obs, ill),
@@ -97,7 +97,7 @@ def _generateThemeHexValues(hue1, hue2):
         "term.ansiBrightMagenta":   LCHabColor(50, 50, hue1, obs, ill),
         "term.ansiBrightCyan":      LCHabColor(65, 20, hue1, obs, ill),
         "term.ansiBrightWhite":     LCHabColor(100, 10, hue2, obs, ill),
-        "term.background":          LCHabColor(10, 0, 0, obs, ill),
+        "term.background":          LCHabColor(5, 0, 0, obs, ill),
         "term.foreground":          LCHabColor(80, 10, hue2, obs, ill),
     }
 
