@@ -1,3 +1,8 @@
+# 1.2.0 | 2022-08-07
+
+- Darken background colors slightly to increase contrast
+- Add bracket pair colors to support bracket pair colorization
+
 # 1.1.0 | 2021-10-18
 
 - New border and background colors (mainly to improve visiblity of GUI settings editor inputs)
