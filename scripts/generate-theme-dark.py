@@ -8,8 +8,8 @@ import json
 def main():
     if (len(argv) > 3):
         name = str(argv[1])
-        hue1 = int(argv[2])
-        hue2 = int(argv[3])  # +/- 120 from hue1 - whichever looks better
+        hue1 = int(argv[2]) # primary
+        hue2 = int(argv[3]) # secondary; set it to +/- 120 from hue1 - whichever looks better
 
         generateUniColorVsCodeTheme(name, hue1, hue2)
     else:
@@ -31,30 +31,33 @@ def generateUniColorVsCodeTheme(name, hue1, hue2):
 def _generateThemeHexValues(hue1, hue2):
     '''
     Takes two Lch hue values from 0-360 and generates list of hex values for color theme.
+
+    Italics are used for comments, library/support entities, storage types, attributes, and markup italic.
+    Bold is used for method/function declarations and markup bold.
     '''
     obs = '2'
     ill = 'd50'
     lch_colors = {
         # EDITOR
         # bgs
-        'bg0':          LCHabColor(10, 0, 0, obs, ill),
-        'bg1':          LCHabColor(15, 0, 0, obs, ill),
-        'bg2':          LCHabColor(25, 0, 0, obs, ill),
+        'bg0':          LCHabColor(5, 0, 0, obs, ill),  # default background
+        'bg1':          LCHabColor(10, 0, 0, obs, ill), # line highlight
+        'bg2':          LCHabColor(20, 0, 0, obs, ill), # selection
         # fgs
-        'fg0':          LCHabColor(40, 10, hue2, obs, ill),
-        'fg1':          LCHabColor(60, 10, hue2, obs, ill),
-        'fg2':          LCHabColor(80, 10, hue2, obs, ill),
-        'fg3':          LCHabColor(90, 10, hue2, obs, ill),
+        'fg0':          LCHabColor(40, 10, hue2, obs, ill), # whitespace foreground
+        'fg1':          LCHabColor(60, 10, hue2, obs, ill), # keywords, storage, tags, storage types, attributes
+        'fg2':          LCHabColor(80, 10, hue2, obs, ill), # default foreground, entities, cursor, markup italic
+        'fg3':          LCHabColor(90, 10, hue2, obs, ill), # method/function declarations, markup bold
         # color
-        'color0':       LCHabColor(50, 20, hue1, obs, ill),
-        'color1':       LCHabColor(60, 50, hue1, obs, ill),
-        'color2':       LCHabColor(70, 20, hue1, obs, ill),
-        'color3':       LCHabColor(80, 50, hue1, obs, ill),
+        'color0':       LCHabColor(50, 20, hue1, obs, ill), # comments, markup quotes
+        'color1':       LCHabColor(60, 50, hue1, obs, ill), # strings, CSS tags, markup code
+        'color2':       LCHabColor(70, 20, hue1, obs, ill), # variables, markup underline
+        'color3':       LCHabColor(80, 50, hue1, obs, ill), # constants, HTML tags, markup headings
         # red, green, blue, orange
-        'red':          LCHabColor(60, 50, 30, obs, ill),
-        'orange':       LCHabColor(60, 50, 60, obs, ill),
-        'green':        LCHabColor(60, 50, 150, obs, ill),
-        'blue':         LCHabColor(60, 43, 270, obs, ill),
+        'red':          LCHabColor(60, 50, 30, obs, ill), # errors, invalid, diff deleted
+        'orange':       LCHabColor(60, 50, 60, obs, ill), # warnings
+        'green':        LCHabColor(60, 50, 150, obs, ill), # diff inserted
+        'blue':         LCHabColor(60, 43, 270, obs, ill), # diff changed
         'darkRed':      LCHabColor(20, 20, 30, obs, ill),
         'darkOrange':   LCHabColor(20, 20, 60, obs, ill),
         'darkBlue':     LCHabColor(20, 20, 270, obs, ill),
@@ -64,10 +67,10 @@ def _generateThemeHexValues(hue1, hue2):
         'dullBlue':     LCHabColor(60, 20, 270, obs, ill),
 
         # UI / NON-EDITOR
-        'bg00':                 LCHabColor(5, 0, 0, obs, ill),
-        'bg1.5':                LCHabColor(20, 0, 0, obs, ill),
-        'bg3':                  LCHabColor(30, 0, 0, obs, ill),
-        'bg3.5':                LCHabColor(40, 0, 0, obs, ill),
+        'bg00':                 LCHabColor(0, 0, 0, obs, ill),
+        'bg1.5':                LCHabColor(15, 0, 0, obs, ill),
+        'bg3':                  LCHabColor(25, 0, 0, obs, ill),
+        'bg3.5':                LCHabColor(35, 0, 0, obs, ill),
         'focusBorder':          LCHabColor(40, 40, hue1, obs, ill),
         'hoverBg':              LCHabColor(47, 40, hue1, obs, ill),
         'btnBadgeBg':           LCHabColor(40, 25, hue1, obs, ill),
@@ -97,7 +100,7 @@ def _generateThemeHexValues(hue1, hue2):
         "term.ansiBrightMagenta":   LCHabColor(50, 50, hue1, obs, ill),
         "term.ansiBrightCyan":      LCHabColor(65, 20, hue1, obs, ill),
         "term.ansiBrightWhite":     LCHabColor(100, 10, hue2, obs, ill),
-        "term.background":          LCHabColor(10, 0, 0, obs, ill),
+        "term.background":          LCHabColor(5, 0, 0, obs, ill),
         "term.foreground":          LCHabColor(80, 10, hue2, obs, ill),
     }
 
@@ -164,6 +167,13 @@ def _generateJsonContent(name, colors):
             "editor.selectionHighlightBackground": colors['color2'] + '18',
             "editor.wordHighlightBackground": colors['color1'] + '30',
             "editor.wordHighlightStrongBackground": colors['editorWordHlStrongBg'] + '30',
+            "editorBracketHighlight.foreground1": colors['fg2'],
+            "editorBracketHighlight.foreground2": colors['fg1'],
+            "editorBracketHighlight.foreground3": colors['fg2'],
+            "editorBracketHighlight.foreground4": colors['fg1'],
+            "editorBracketHighlight.foreground5": colors['fg2'],
+            "editorBracketHighlight.foreground6": colors['fg1'],
+            "editorBracketHighlight.unexpectedBracket.foreground": colors['red'],
             "editorBracketMatch.background": colors['bg3.5'] + '1a',
             "editorBracketMatch.border": colors['fg1'],
             "editorCodeLens.foreground": colors['fg2'],
